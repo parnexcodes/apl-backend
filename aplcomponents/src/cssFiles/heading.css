@@ -1,0 +1,23 @@
+.heading {
+    text-align: center;
+    padding: 1rem 0;
+    padding-bottom: 0.5rem;
+    font-size: 2.5rem;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;}
+.heading span {
+    background: orange;
+    color: rgb(33, 29, 29);
+    display: inline-block;
+    padding: .5rem 2rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+@media (max-width:450px) {
+
+   
+    .heading {
+
+        font-size: 1.5rem;
+    }
+}

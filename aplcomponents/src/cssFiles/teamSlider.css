@@ -1,0 +1,30 @@
+.each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 180px;
+    /* margin-bottom: 2rem; */
+  }
+  
+  .each-slide span {
+    padding: 20px;
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
+  }
+
+
+  
+
+  @media screen and (max-width:430px){
+    .each-slide > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        height: 100px;
+        /* margin-top: 2rem; */
+      }
+    
+  }

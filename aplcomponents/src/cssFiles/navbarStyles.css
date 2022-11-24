@@ -1,0 +1,153 @@
+.NavbarItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0 30px;
+    background-color: #222;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    width: 95%;
+    height: 80px;
+    border-radius: 13px;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 99;
+}
+
+.logo {
+    font-weight: bold;
+    color: white;
+    justify-self: start;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.logo:hover {
+    color: rgb(255, 137, 2);
+    justify-self: start;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.logo-icon {
+    margin-left: 0.2rem;
+    font-size: 2rem;
+
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: white;
+    padding: 0.7rem 0.7rem;
+    white-space: nowrap;
+}
+
+.nav-links i {
+    padding-right: 8px;
+}
+
+.nav-links:hover {
+    border-radius: 4px;
+    color: orange;
+
+    transition: all 0.2s ease-in-out;
+    
+}
+
+.nav-menu.active{
+    left: 0%  ;
+}
+
+.fa-bars,
+.fa-times {
+    color: #fff;
+}
+
+.menu-icons {
+    display: none;
+}
+
+/* responsive queries for navbar */
+@media screen and (max-width :850px) {
+
+    .NavbarItems {
+        z-index: 99;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: rgba(255, 255, 255, 0.775);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37);
+        backdrop-filter: blur(4px);
+        border-radius: 13px;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0%;
+        left: -110%;
+        align-items: stretch;
+        padding: 80px 0 30px 0;
+        margin: 0;
+        z-index: -1;
+    }
+
+    .nav-links {
+        display: block;
+        width: 100%;
+        padding: 1rem 0;
+        color: #222;
+        border-radius:16px ;
+    }
+
+    .nav-links:hover {
+        background: rgba(0, 0, 0, 0.889);
+        backdrop-filter: blur(20px);
+    }
+
+    .menu-icons {
+        display: block;
+    }
+
+    .logo{
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+   
+    .logo_icon{
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width :430px) {
+
+.NavbarItems {
+   height: 50px;  
+}
+
+
+.nav-links {
+    width:100%;
+    padding: 0.5rem 0;
+    color: #222;
+    border-radius:16px ;
+}
+
+.logo_icon{
+    display: none;
+}}
