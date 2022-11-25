@@ -1,8 +1,10 @@
 {
 	"dependencies": {
+		"@fastify/env": "^4.1.0",
 		"@prisma/client": "^4.6.1",
 		"cheerio": "1.0.0-rc.12",
-		"fastify": "^4.10.2"
+		"fastify": "^4.10.2",
+		"luxon": "^3.1.0"
 	},
 	"devDependencies": {
 		"prisma": "^4.6.1"
