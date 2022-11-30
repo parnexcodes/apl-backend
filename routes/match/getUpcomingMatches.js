@@ -19,7 +19,10 @@ const getUpcomingMatches = async (fastify) => {
         let matchType = $(element).find('div.pmd-card-media > div.media-body > h3 > strong').text()
         let matchTime = $(element).find('div.pmd-card-actions.test-result > span').attr('data-date').replace('+0000 (Coordinated Universal Time)', '').trim()
         let dt = new Date(matchTime)
-        let newTime = dt.toLocaleString(DateTime.DATETIME_MED)
+        let timeZone = "Asia/Kolkata";
+        let newTime = dt.toLocaleString(DateTime.DATETIME_MED, {
+          timeZone
+        })
         // matchTime = DateTime.fromHTTP(matchTime).toFormat('ff')
         dataArr.push({
             matchLink,
