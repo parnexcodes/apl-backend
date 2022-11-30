@@ -64,6 +64,9 @@ fastify.get("/*", async (request, reply) => {
 const getTournamentDetail = require('./routes/tournament/getTournamentDetail')
 const getTournamentStandings = require('./routes/tournament/getTournamentStandings')
 
+// Team Endpoints
+const getTeamInfo = require('./routes/team/getTeamInfo')
+
 // Match Endpoints
 const getMatchDetail = require('./routes/match/getMatchDetail')
 const getMatchMVP = require('./routes/match/getMatchMVP')
@@ -78,6 +81,9 @@ const Testing = require('./routes/Testing')
 // Tournament Endpoints
 fastify.register(getTournamentDetail)
 fastify.register(getTournamentStandings)
+
+// Team Endpoints
+fastify.register(getTeamInfo)
 
 // Match Endpoints
 fastify.register(getMatchDetail)
