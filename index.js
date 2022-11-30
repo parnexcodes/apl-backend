@@ -75,6 +75,7 @@ const getPlayingSquad = require('./routes/match/getPlayingSquad')
 const getMatchDetailV2 = require('./routes/match/getMatchDetailV2')
 const getUpcomingMatches = require('./routes/match/getUpcomingMatches')
 const getLiveMatches = require('./routes/match/getLiveMatches')
+const getCompletedMatches = require('./routes/match/getCompletedMatches')
 
 const Testing = require('./routes/Testing')
 
@@ -93,6 +94,7 @@ fastify.register(getPlayingSquad)
 fastify.register(getMatchDetailV2)
 fastify.register(getUpcomingMatches)
 fastify.register(getLiveMatches)
+fastify.register(getCompletedMatches)
 
 fastify.register(Testing)
 fastify.register(fastifyEnv, options)
