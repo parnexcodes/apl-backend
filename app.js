@@ -33,14 +33,26 @@ fastify.get('/api', async (request, reply) => {
   console.log(process.env)
   return {
     info: "Welcome to Arya Premier League API.",
-    endpoints: [
+    endpoints: 
       {
-        pre: "/api/pre",
-        cat: "/api/cat?q={category_name}",
-        group: "/api/group?q={group_name}",
-        search: "/api/search?q={search_query}"
-      },
-    ],    
+        match: [
+          {
+            live: '/api/live-matches',
+            upcoming: '/api/upcoming-matches',
+            match_detail: '/api/match/detail?id=',
+            match_detail_v2: '/api/match/v2/detail?id=',
+            match_mvp: '/api/match/mvp?id=',
+            top_mvp: '/api/match/top-mvp?id=',
+            players: '/api/match/players?id='
+          }
+        ],
+        tournament: [
+          {
+            tournament_detail: '/api/tournament/detail',
+            tournament_standings: '/api/tournament/standings'
+          }
+        ]
+      },    
   }
 })
 
@@ -51,6 +63,9 @@ fastify.get("/*", async (request, reply) => {
 // Tournament Endpoints
 const getTournamentDetail = require('./routes/tournament/getTournamentDetail')
 const getTournamentStandings = require('./routes/tournament/getTournamentStandings')
+
+// Team Endpoints
+const getTeamInfo = require('./routes/team/getTeamInfo')
 
 // Match Endpoints
 const getMatchDetail = require('./routes/match/getMatchDetail')
@@ -66,6 +81,9 @@ const Testing = require('./routes/Testing')
 // Tournament Endpoints
 fastify.register(getTournamentDetail)
 fastify.register(getTournamentStandings)
+
+// Team Endpoints
+fastify.register(getTeamInfo)
 
 // Match Endpoints
 fastify.register(getMatchDetail)

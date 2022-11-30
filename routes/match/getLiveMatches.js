@@ -16,15 +16,15 @@ const getLiveMatches = async (fastify) => {
         let teamA = $(element).find('div.section1').find('h3.team-name').text()
         let teamB = $(element).find('div.section2').find('h3.team-name').text()
         let matchType = $(element).find('div.pmd-card-media > div.media-body > h3 > strong').text()
-        let tossResult = $(element).find('div.pmd-card-actions.test-result > span').text()
+        let info = $(element).find('div.pmd-card-actions.test-result > span').text()
         let scoreA = $(element).find('div.section1 > div > div.media-right.test-score.col-lg-6.col-md-6.col-sm-6.col-xs-6 > span > b').text()
-        let scoreB = $(element).find('div.section2 > div > div.media-right.test-score.col-lg-6.col-md-6.col-sm-6.col-xs-6 > span > b > span').text()
+        let scoreB = $(element).find('div.section2 > div > div.media-right.test-score.col-lg-6.col-md-6.col-sm-6.col-xs-6 > span > b').text()
         dataArr.push({
             matchLink,
             matchType,
             teamA,
             teamB,
-            tossResult,
+            info,
             scoreA,
             scoreB
         })
