@@ -14,6 +14,8 @@ const getUpcomingMatches = async (fastify) => {
     let dataArr = []
     $('div.row.upmatchesDiv').find('div.col-lg-4.col-md-6.col-sm-6.col-xs-12.custom-card-matches').each((index, element) => {
         let matchLink = $(element).find('a').attr('href')
+        let matchID = matchLink.split('/')[2]
+        let matchDay = $(element).find('div.pmd-card-media > div.media-body > h3').text().split(',')[3].trim()
         let teamA = $(element).find('div.section1').find('h3.team-name').text()
         let teamB = $(element).find('div.section2').find('h3.team-name').text()
         let matchType = $(element).find('div.pmd-card-media > div.media-body > h3 > strong').text()
@@ -26,6 +28,8 @@ const getUpcomingMatches = async (fastify) => {
         // matchTime = DateTime.fromHTTP(matchTime).toFormat('ff')
         dataArr.push({
             matchLink,
+            matchID,
+            matchDay,
             matchType,
             teamA,
             teamB,
