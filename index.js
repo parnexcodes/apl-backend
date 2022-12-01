@@ -47,7 +47,7 @@ fastify.get("/api", async (request, reply) => {
       ],
       team: [
         {
-          team_players: "/api/team/players",
+          team_players: "/api/team/players?id=",
         },
       ],
       tournament: [
